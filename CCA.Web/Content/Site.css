@@ -1,0 +1,327 @@
+﻿body {
+    font-family: 'Open Sans', Arial;
+    font-size: medium;
+    color: #b39151;
+    background-color: #fff;
+}
+
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* begin CCA Site Style */
+a {
+    color: #b39151;
+}
+
+    a:hover {
+        color: #c2a774;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    a:visited {
+        color: #c2a774;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+.cca-btn-primary {
+    width: 100%;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background-color: #b39151;
+    color: #fff;
+}
+
+    .cca-btn-primary:hover {
+        cursor: pointer;
+        background-color: #c2a774;
+    }
+
+.cca-btn-secondary {
+    width: 100%;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-top: 10px;
+    background-color: #fff;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #b39151;
+    color: #b39151;
+}
+
+    .cca-btn-secondary:hover {
+        cursor: pointer;
+        background-color: #e8deca;
+    }
+
+select {
+    -webkit-appearance: none; /*REMOVES DEFAULT CHROME & SAFARI STYLE*/
+    -moz-appearance: none; /*REMOVES DEFAULT FIREFOX STYLE*/
+    font-family: 'Open Sans';
+    font-size: 100%;
+    width: 100%;
+    min-width: 200px;
+    padding-left: 5px;
+    padding-top: 3px;
+    margin-left: auto;
+    margin-top: 15px;
+    margin-right: 10px;
+    padding-bottom: 3px;
+    border-color: #b2b2b2;
+    border-width: 1px;
+    border-style: solid;
+    background: url(images/cca-dropdown.png) no-repeat right center;
+}
+
+.cca-divider {
+    width: 100%;
+    position: relative;
+}
+
+    .cca-divider #bg {
+        height: 1px;
+        background-color: #cac9c6;
+        width: 100%;
+        margin-top: 8px;
+        position: absolute;
+    }
+
+
+
+    .cca-divider #content {
+        font-size: 80%;
+        color: #cac9c6;
+        background-color: #fcfbf8;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: 160px;
+        text-align: center;
+    }
+
+.cca-landing-left {
+    height: 100vh;
+    background-color: #ececec;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media (max-width: 767px) {
+    .cca-landing-left {
+        display: none;
+    }
+}
+
+.cca-landing-left #label {
+    font-size: 280%;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.cca-landing-left #footnote {
+    font-size: 180%;
+    font-weight: 400;
+    margin-top: 15px;
+}
+
+
+.cca-landing-right {
+    background-color: #fcfbf8;
+    height: 100vh;
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+    .cca-landing-right #title {
+        font-size: 180%;
+        font-weight: 600;
+        margin-top: 10px;
+    }
+
+    .cca-landing-right #line {
+        height: 4px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 30px;
+    }
+
+        .cca-landing-right #line div {
+            width: 25%;
+            height: 100%;
+            float: left;
+        }
+
+        .cca-landing-right #line #l1 {
+            background-color: #b39151;
+        }
+
+        .cca-landing-right #line #l2 {
+            background-color: #c2a774;
+        }
+
+        .cca-landing-right #line #l3 {
+            background-color: #d9c8a9;
+        }
+
+        .cca-landing-right #line #l4 {
+            background-color: #e8deca;
+        }
+
+    .cca-landing-right #loginPanel input {
+        border-width: 2px;
+        border-style: solid;
+        border-color: #cac9c6;
+        width: 100%;
+        font-size: 120%;
+        padding-left: 30px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-right: 10px;
+        background-repeat: no-repeat;
+        background-position-x: 5px;
+        background-position-y: center;
+        margin-top: 20px;
+    }
+
+    .cca-landing-right #loginPanel #userId {
+        background-image: url(images/cca-login-userid.png);
+    }
+
+    .cca-landing-right #loginPanel #pwd {
+        background-image: url(images/cca-login-password.png);
+    }
+
+    .cca-landing-right #resetPwd {
+        font-size: 80%;
+        font-weight: 600;
+    }
+
+.cca-footnote {
+    color: #cac9c6;
+    font-size: 80%;
+}
+
+.cca-loader {
+    width: 100px;
+    background-image: url(images/busy.gif);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.cca-register-left {
+    height: 100vh;
+    background-color: #ececec;
+    padding: 0px 20px;
+}
+
+
+
+.cca-register-right {
+    background-color: #fcfbf8;
+    height: 100vh;
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#regFrm {
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+    #regFrm .cca-frm-row {
+        width: 100%;
+    }
+
+        #regFrm .cca-frm-row .cca-label {
+            font-size: 90%;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+
+            #regFrm .cca-frm-row .cca-label .cca-compulsory {
+                color: #ef4136;
+                margin-left: 10px;
+            }
+
+        #regFrm .cca-frm-row .cca-loader {
+            margin-top: 15px;
+            margin-left: 15px;
+        }
+
+        #regFrm .cca-frm-row div input {
+            width: 100%;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            padding-left: 10px;
+            padding-right: 10px;
+            float: left;
+            border-width: 3px;
+            border-style: solid;
+            border-color: #cccccc;
+        }
+
+    #regFrm .cca-msg-row {
+        width: 100%;
+        text-align: left;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    #regFrm .cca-msg-row div {
+        padding-left: 20px;
+    }
+
+
+.cca-title {
+    font-size: 180%;
+    font-weight: 300;
+    margin-top: 10px;
+}
+
+.cca-paragraph {
+    font-size: 100%;
+    text-align: justify;
+    font-weight: 300;
+    color: #828283;
+}
+
+.cca-subtitle {
+    font-size: 140%;
+    font-weight: 300;
+}
+
+.cca-valid-color {
+    color: #5fe281;
+}
+
+.cca-error-color {
+    color: #f04d43;
+}
+
+.cca-disabled {
+    cursor: not-allowed;
+
+}

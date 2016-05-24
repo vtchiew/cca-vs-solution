@@ -1,0 +1,56 @@
+﻿@using CCA.Web.Resources
+
+@{
+    ViewBag.Title = Home.PageTitle;
+}
+<div class="row">
+    <div class="col-lg-8 col-md-8 col-sm-6 cca-landing-left">
+        <div id="label">@Home.ClinicName</div>
+        <div id="footnote">@Home.ClinicSlogan</div>
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 cca-landing-right">
+        <div id="lang" style="margin-bottom: 50px"><select id="langSelect">
+            </select></div>
+        <div id="title">@Home.PortalName</div>
+        <div id="line">
+            <div id="l1"></div>
+            <div id="l2"></div>
+            <div id="l3"></div>
+            <div id="l4"></div>
+        </div>
+        <form method="post" action="/Home/Login" id="frm">
+            <div id="loginPanel">
+
+                <input type="text" id="userId" name="userId" placeholder="@Home.Login_Placeholder_UserId" />
+                <input type="password" id="pwd" name="pwd" placeholder="@Home.Login_Placeholder_Password" />
+
+            </div>
+            <div style="margin-top:25px">
+                <a id="resetPwd">@Home.Login_Link_ForgotPassword</a>
+            </div>
+            <input class="cca-btn-primary" type="submit" id="btnSubmit" name="btnSubmit" style="margin-top:30px" value="@Home.Login_Button_Login" />
+        </form>
+        <div class="cca-divider" style="margin-top:50px">
+            <div id="bg"></div>
+            <div id="content">@Home.Divider_Statement</div>
+        </div>
+        <div style="margin-top:80px">
+            <input type="button" class="cca-btn-secondary" id="btnSignUp" name="btnSignUp" value="@Home.SignUp_Button_SignUp" />
+        </div>
+        <p style="margin-top:30px" class="cca-footnote">@Home.Disclaimer_Statement_1 <a href="#">@Home.Disclaimer_Statement_2</a> @Home.Disclaimer_Statement_3 <a href="#">@Home.Disclaimer_Statement_4</a></p>
+    </div>
+
+</div>
+
+@section scripts {
+    <script language="javascript">
+        
+        $(document).ready(function () {
+            $('#btnSignUp').click(function () {
+                location.href = localeBase + 'Register';
+            });
+        });
+    </script>
+    }
+
+

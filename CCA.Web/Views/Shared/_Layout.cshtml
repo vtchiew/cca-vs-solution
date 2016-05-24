@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,300italic' rel='stylesheet' type='text/css'>
+    <title>@ViewBag.Title - CCA</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="container body-content">
+        @RenderBody()
+        
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/ccajs")
+
+    <script language="javascript">
+        var localeBase = '/' + '@ViewContext.RouteData.Values["language"]' + '-' + '@ViewContext.RouteData.Values["culture"]' + '/';
+        $(document).ready(function () {
+            initLang('@ViewContext.RouteData.Values["language"].ToString()', '@ViewContext.RouteData.Values["culture"].ToString()', '@ViewContext.RouteData.Values["controller"].ToString()', '@ViewContext.RouteData.Values["action"].ToString()', '@ViewContext.RouteData.Values["id"]');
+        });
+    </script>
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>
